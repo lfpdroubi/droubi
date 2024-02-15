@@ -4,7 +4,7 @@ description: |
   Parte 3.
 author:
   - name: Luiz Droubi
-    url: https://droubi.me
+    url: https://lfpdroubi.github.io/droubi/
 date: 2024-02-15
 output:
   distill::distill_article:

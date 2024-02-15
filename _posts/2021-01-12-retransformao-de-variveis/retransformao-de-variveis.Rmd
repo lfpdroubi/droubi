@@ -4,7 +4,7 @@ description: |
   Parte 2.
 author:
   - name: Luiz Droubi
-    url: https://droubi.me
+    url: https://lfpdroubi.github.io/droubi/
 date: 2021-01-12
 output:
   distill::distill_article:
@@ -62,7 +62,9 @@ testf <- function(dpqr, nobs, ...) {
 }
 ```
 
-Em [um dos posts anteriores](https://droubi.me/post/2020-12-30-implica%C3%A7%C3%B5es-da-utiliza%C3%A7%C3%A3o-de-transforma%C3%A7%C3%B5es-sobre-a-vari%C3%A1vel-dependente/) comentei brevemente sobre o problema da retransformação de variáveis. No [último post](https://droubi.me/post/2021-01-07-fun%C3%A7%C3%B5es-de-perda-e-fun%C3%A7%C3%B5es-escore/)
+Em [um dos posts anteriores](https://lfpdroubi.github.io/droubi/posts/2020-12-30-implicaes-da-utilizao-de-transformaes-sobre-a-varivel-dependente/) comentei brevemente sobre 
+o problema da retransformação de variáveis. No 
+[último post](https://droubi.me/post/2021-01-07-fun%C3%A7%C3%B5es-de-perda-e-fun%C3%A7%C3%B5es-escore/)
 mostrei algumas simulações sobre a retransformação de valores quando utiliza-se
 a transformação da variável dependente para a escala logarítmica.
 
@@ -146,6 +148,11 @@ E na Figura \@ref(fig:linPowerPlot), o Poder de Predição do modelo linear.
 Percebe-se que o problema fica na estimação de valores nos extremos da escala 
 (inclusive o modelo prevê alguns valores negativos).
 
+```{r, echo=FALSE}
+library(car)
+```
+
+
 ```{r linPowerPlot, fig.cap="Poder de Predição para o modelo linear."}
 powerPlot(linFit, axis = "inverted")
 ```
@@ -155,7 +162,6 @@ A Figura \@ref(fig:boxCox) mostra que o melhor parâmetro para transformação
 quadrada.
 
 ```{r boxCox, fig.cap="Ajuste do parâmetro de transformação para família de Box-Cox."}
-library(car)
 boxCox(linFit)
 ```
 

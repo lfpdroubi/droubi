@@ -4,7 +4,7 @@ description: |
   Sobre retransformação de variáveis.
 author:
   - name: Luiz Droubi
-    url: https://droubi.me
+    url: https://lfpdroubi.github.io/droubi/
 date: 2020-12-30
 output:
   distill::distill_article:
